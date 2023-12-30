@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>ERP</title>
+<link rel="apple-touch-icon" href="http://erpprojects.great-site.net/erp_new/app-assets/images/ico/apple-icon-120.html">
+
+<link href="https://fonts.googleapis.com/css?family=Luxurious Roman:400,500,600%7CIBM:400,500,600,700" rel="stylesheet">
+
+<!-- BEGIN: Vendor CSS-->
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/css/vendors.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/css/charts/apexcharts.css"> -->
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/css/extensions/dragula.min.css">
+<!-- END: Vendor CSS-->
+
+<!-- BEGIN: Theme CSS-->
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/bootstrap-extended.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/colors.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/components.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/themes/dark-layout.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/themes/semi-dark-layout.min.css">
+<!-- END: Theme CSS-->
+
+<!-- BEGIN: Page CSS-->
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/core/menu/menu-types/horizontal-menu.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/pages/widgets.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/pages/dashboard-analytics.min.css">
+<!-- END: Page CSS-->
+
+<!-- BEGIN: Custom CSS-->
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/assets/css/style.css">
+<!-- END: Custom CSS-->
+<!-- datatable CSS-->
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/css/vendors.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/css/tables/datatable/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/css/tables/datatable/responsive.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/css/tables/datatable/buttons.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="http://erpprojects.great-site.net/erp_new/assets/app-assets/css/custom.css">
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script> -->
+    <style type="text/css">
+        .user-name {
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="horizontal-layout horizontal-menu navbar-static  m-0 footer-static bg-white " data-open="hover" data-menu="horizontal-menu">
+    <style>
+    @media (max-width: 991px) { 
+        .main-menu-content{
+			padding-top: 50px;
+        }
+    }
+</style>
+<nav class="header-navbar navbar-expand-lg navbar navbar-with-menu navbar-static-top bg-dark navbar-brand-center">
+	<div class="navbar-header d-xl-block d-none">
+		<ul class="nav navbar-nav flex-row">
+			<li class="nav-item"><a class="navbar-brand" href="http://erpprojects.great-site.net/erp_new/dashboard">
+					<!--<div class="brand-logo"><img class="logo" src="http://erpprojects.great-site.net/erp_new/assets/app-assets/images/logo/logo-light.png"></div>-->
+					<h2 class="brand-text-white mb-0">ERP</h2>
+				</a></li>
+		</ul>
+	</div>
+	<div class="navbar-wrapper">
+		<div class="navbar-container content">
+			<div class="navbar-collapse" id="navbar-mobile">
+				<div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+					<ul class="nav navbar-nav">
+						<li class="nav-item mobile-menu mr-auto"><a class="nav-link nav-menu-main menu-toggle" href="javascript:void(0);"><i class="bx bx-menu"></i></a></li>
+					</ul>
+					<ul class="nav navbar-nav bookmark-icons">
+						<li class="nav-item d-none d-lg-block"><a class="nav-link" href="http://erpprojects.great-site.net/erp_new//product" data-toggle="tooltip" data-placement="top" title="product"><i class="ficon bx bx-barcode-reader"></i>Products</a></li>
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="http://erpprojects.great-site.net/erp_new//groupProducts" data-toggle="tooltip" data-placement="top" title="Groups"><i class="ficon bx bx-category-alt"></i>Group</a></li>
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="http://erpprojects.great-site.net/erp_new//orders" data-toggle="tooltip" data-placement="top" title="Orders"><i class="ficon bx bx-cart-alt"></i>Orders</a></li>
+
+					</ul>
+				</div>
+				<ul class="nav navbar-nav float-right d-flex align-items-center">
+					<li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language d-lg-inline d-none">English</span></a>
+					</li>
+					<li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon bx bx-fullscreen"></i></a></li>
+					<li class="nav-item nav-search"><a class="nav-link nav-link-search pt-2"><i class="ficon bx bx-search"></i></a>
+						<div class="search-input">
+							<div class="search-input-icon"><i class="bx bx-search primary"></i></div>
+							<input class="input" type="text" placeholder="Explore..." tabindex="-1" data-search="template-search">
+							<div class="search-input-close"><i class="bx bx-x"></i></div>
+							<ul class="search-list"></ul>
+						</div>
+					</li>
+
+					<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="javascript:void(0);" data-toggle="dropdown">
+							<div class="user-nav d-lg-flex d-none"><span class="user-name">Admin</span><span class="user-status">Available</span></div><span> <img class="round" src="http://erpprojects.great-site.net/erp_new/assets/app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right pb-0">
+                        <a class="dropdown-item" href="http://erpprojects.great-site.net/erp_new/login/logout">
+                        <i class="bx bx-power-off mr-50"></i> Logout
+                        </a>
+                        <a class="dropdown-item" href="http://erpprojects.great-site.net/erp_new//company">
+                        <i class="bx bx-user mr-50"></i> Profile
+                        </a>
+
+                        </div>
+
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-sticky navbar-dark navbar-without-dd-arrow" role="navigation" data-menu="menu-wrapper">
+	<div class="navbar-header d-xl-none d-block">
+		<ul class="nav navbar-nav flex-row">
+			<li class="nav-item mr-auto"><a class="navbar-brand" href="index.html">
+					<div class="brand-logo">
+						<svg class="logo" width="26px" height="26px" viewbox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<title>icon</title>
+							<defs>
+								<lineargradient id="linearGradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
+									<stop stop-color="#5A8DEE" offset="0%"></stop>
+									<stop stop-color="#699AF9" offset="100%"></stop>
+								</lineargradient>
+								<lineargradient id="linearGradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+									<stop stop-color="#FDAC41" offset="0%"></stop>
+									<stop stop-color="#E38100" offset="100%"></stop>
+								</lineargradient>
+							</defs>
+							<g id="Sprite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="sprite" transform="translate(-69.000000, -61.000000)">
+									<g id="Group" transform="translate(17.000000, 15.000000)">
+										<g id="icon" transform="translate(52.000000, 46.000000)">
+											<path id="Combined-Shape" d="M13.5909091,1.77272727 C20.4442608,1.77272727 26,7.19618701 26,13.8863636 C26,20.5765403 20.4442608,26 13.5909091,26 C6.73755742,26 1.18181818,20.5765403 1.18181818,13.8863636 C1.18181818,13.540626 1.19665566,13.1982714 1.22574292,12.8598734 L6.30410592,12.859962 C6.25499466,13.1951893 6.22958398,13.5378796 6.22958398,13.8863636 C6.22958398,17.8551125 9.52536149,21.0724191 13.5909091,21.0724191 C17.6564567,21.0724191 20.9522342,17.8551125 20.9522342,13.8863636 C20.9522342,9.91761479 17.6564567,6.70030817 13.5909091,6.70030817 C13.2336969,6.70030817 12.8824272,6.72514561 12.5388136,6.77314791 L12.5392575,1.81561642 C12.8859498,1.78721495 13.2366963,1.77272727 13.5909091,1.77272727 Z"></path>
+											<path id="Combined-Shape" d="M13.8863636,4.72727273 C18.9447899,4.72727273 23.0454545,8.82793741 23.0454545,13.8863636 C23.0454545,18.9447899 18.9447899,23.0454545 13.8863636,23.0454545 C8.82793741,23.0454545 4.72727273,18.9447899 4.72727273,13.8863636 C4.72727273,13.5378966 4.74673291,13.1939746 4.7846258,12.8556254 L8.55057141,12.8560055 C8.48653249,13.1896162 8.45300462,13.5340745 8.45300462,13.8863636 C8.45300462,16.887125 10.8856023,19.3197227 13.8863636,19.3197227 C16.887125,19.3197227 19.3197227,16.887125 19.3197227,13.8863636 C19.3197227,10.8856023 16.887125,8.45300462 13.8863636,8.45300462 C13.529522,8.45300462 13.180715,8.48740462 12.8430777,8.55306931 L12.8426531,4.78608796 C13.1851829,4.7472336 13.5334422,4.72727273 13.8863636,4.72727273 Z" fill="#4880EA"></path>
+											<path id="Combined-Shape" d="M13.5909091,1.77272727 C20.4442608,1.77272727 26,7.19618701 26,13.8863636 C26,20.5765403 20.4442608,26 13.5909091,26 C6.73755742,26 1.18181818,20.5765403 1.18181818,13.8863636 C1.18181818,13.540626 1.19665566,13.1982714 1.22574292,12.8598734 L6.30410592,12.859962 C6.25499466,13.1951893 6.22958398,13.5378796 6.22958398,13.8863636 C6.22958398,17.8551125 9.52536149,21.0724191 13.5909091,21.0724191 C17.6564567,21.0724191 20.9522342,17.8551125 20.9522342,13.8863636 C20.9522342,9.91761479 17.6564567,6.70030817 13.5909091,6.70030817 C13.2336969,6.70030817 12.8824272,6.72514561 12.5388136,6.77314791 L12.5392575,1.81561642 C12.8859498,1.78721495 13.2366963,1.77272727 13.5909091,1.77272727 Z" fill="url(#linearGradient-1)"></path>
+											<rect id="Rectangle" x="0" y="0" width="7.68181818" height="7.68181818"></rect>
+											<rect id="Rectangle" fill="url(#linearGradient-2)" x="0" y="0" width="7.68181818" height="7.68181818"></rect>
+										</g>
+									</g>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<h2 class="brand-text mb-0">ERP</h2>
+				</a></li>
+			<li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary toggle-icon"></i></a></li>
+			<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="javascript:void(0);" data-toggle="dropdown">
+					<span><img class="round" src="http://erpprojects.great-site.net/erp_new/assets/app-assets/images/portrait/small/avatar-s-11.jpg" alt="naveen" height="40" width="40"></span></a>
+				<div class="dropdown-menu dropdown-menu-right pb-0"><a class="dropdown-item" href="page-user-profile.html"><i class="bx bx-user mr-50"></i> Edit Profile</a><a class="dropdown-item" href="app-email.html"><i class="bx bx-envelope mr-50"></i> My Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="bx bx-check-square mr-50"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="bx bx-message mr-50"></i> Chats</a>
+					<div class="dropdown-divider mb-0"></div><a class="dropdown-item" href="http://erpprojects.great-site.net/erp_new/Admin/logout"><i class="bx bx-power-off mr-50"></i> Logout</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!--<div class="shadow-bottom"></div>
+	<!-- Horizontal menu content-->
+	<!-- Horizontal menu content-->
+ <!--<div class="navbar-container main-menu-content" data-menu="menu-container">
+    <!-- include ../../../includes/mixins-->
+  <!--   <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="filled">
+        <li class="dropdown nav-item" data-menu="dropdown">
+            <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">
+                <span data-i18n="Pages">Sales Master</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/company" data-toggle="dropdown">
+                        <i class="bx bx-right-arrow-alt"></i><span data-i18n="Todo">Company</span>
+                    </a>
+                </li>
+                <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/brand" data-toggle="dropdown">
+                        <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chat">Brand</span>
+                    </a>
+                </li>
+                <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/category" data-toggle="dropdown">
+                        <i class="bx bx-right-arrow-alt"></i><span data-i18n="Calendar">Category</span>
+                    </a>
+                </li>
+                <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/sub_category" data-toggle="dropdown">
+                        <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Sub Category</span>
+                    </a>
+                </li>
+                <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/attributes" data-toggle="dropdown">
+                        <i class="bx bx-right-arrow-alt"></i><span data-i18n="Email">Attributes</span>
+                    </a>
+                </li>
+                <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/groupProducts" data-toggle="dropdown">
+                        <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Group Products</span>
+                    </a>
+                </li>
+                <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/product" data-toggle="dropdown">
+                        <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Product</span>
+                    </a>
+                </li>
+                <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/orders" data-toggle="dropdown">
+                        <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Orders</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown nav-item" data-menu="dropdown">
+    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">
+        <span data-i18n="Apps">Purchase Master</span>
+    </a>
+    <ul class="dropdown-menu">
+        <!-- Existing submenu items -->
+        <!-- <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/board" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Email">Add Board</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/brand" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chat">Add Brand</span>
+            </a>
+        </li>
+        <!-- Add more existing submenu items as needed -->
+
+        <!-- Additional submenu items -->
+       <!--  <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/gsm" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Todo">Add GSM</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/type" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Calendar">Add Type</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/colour" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Add colour</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/uom" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Add UOM</span>
+            </a>
+        </li>
+        <hr>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/supplier/create_supplier" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Add suppliers</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/supplier/supplier_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">All suppliers</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/create_raw_material" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Add Rawmaterial</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/raw_material_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Colors">All Rawmaterial Product</span>
+            </a>
+        </li>
+        <!-- Add more additional submenu items as needed -->
+    </ul>
+</li>
+
+        <!-- <li class="dropdown nav-item" data-menu="dropdown">
+    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">
+        <span data-i18n="Forms &amp; Tables">Asset Master</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/machines" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Add Machines</span>
+            </a>
+        </li>
+        <hr>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/consumables" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Add Consumables</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/rawmaterial/accessories" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Add Accessories</span>
+            </a>
+        </li>
+        <!-- Add more existing submenu items as needed -->
+
+        <!-- Additional submenu items -->
+        <!-- <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/asset/asset_category" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Email">Asset Categories</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/asset/asset_register" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chat">Asset Register</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/asset/maintenance_schedule" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Todo">Maintenance Schedule</span>
+            </a>
+        </li>
+        <!-- Add more additional submenu items as needed -->
+   <!--  </ul>
+</li>
+
+        <li class="dropdown nav-item" data-menu="dropdown">
+    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">
+        <span data-i18n="Forms &amp; Tables">Sales Order</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/salesorder/sales_order_create" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Form Layout">Sales Order Create</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/salesorder/sales_order_rate" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Form Wizard">Sales orders-Rate approve</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/salesorder/sales_order_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Form Wizard">All Sales orders</span>
+            </a>
+        </li>
+        <!-- Add more existing submenu items as needed -->
+
+        <!-- Additional submenu items -->
+        <!-- <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/salesorder/sales_order_pending" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Email">Pending Sales Orders</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/salesorder/sales_order_approved" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chat">Approved Sales Orders</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/salesorder/sales_order_rejected" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Todo">Rejected Sales Orders</span>
+            </a>
+        </li>
+        <!-- Add more additional submenu items as needed -->
+    <!-- </ul>
+</li>
+
+        <li class="dropdown nav-item" data-menu="dropdown">
+    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">
+        <span data-i18n="Pages">Work Order</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/workorder/work_order_create" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Form Layout">Work Order Create</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/workorder/work_orders_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Form Layout">All Work Order</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/workorder/work_order_material_issue" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Form Layout">Inventory</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/workorder/work_orders_cutting_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Form Layout">Cutting</span>
+            </a>
+        </li>
+        <!-- Add more existing submenu items as needed -->
+
+        <!-- Additional submenu items -->
+        <!-- <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/workorder/work_orders_printing_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Email">Printing</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/workorder/work_orders_diecutting_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chat">Diecutting</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/workorder/work_orders_pasting_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Todo">Pasting</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/workorder/work_orders_checking_show" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Kanban">Checking</span>
+            </a>
+        </li>
+        <!-- Add more additional submenu items as needed -->
+    <!-- </ul>
+</li>
+
+        <li class="dropdown nav-item" data-menu="dropdown">
+    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">
+        <span data-i18n="Charts &amp; Maps">Inventory</span>
+    </a>
+    <ul class="dropdown-menu">
+
+        <!-- Existing submenu items -->
+       <!--  <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/inventory/pending_deliveries" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">Deilvery Planning</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/inventory/packing_deliveries" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">Packing</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/inventory/delivery_challan_deliveries" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">Delivery Challan</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/inventory/loading_deliveries" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">Loading</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/inventory/dispatch" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">Dispatch</span>
+            </a>
+        </li>
+        <!-- Add more existing submenu items as needed -->
+
+        <!-- Additional submenu items -->
+       <!--  <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/inventory/inventory_report" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Apex">Inventory Report</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/inventory/inventory_history" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">Inventory History</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="http://erpprojects.great-site.net/erp_new/inventory/stock_adjustment" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">Stock Adjustment</span>
+            </a>
+        </li>
+        <!-- Add more additional submenu items as needed -->
+    <!-- </ul>
+</li>
+
+        <li class="dropdown nav-item" data-menu="dropdown">
+    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">
+        <span data-i18n="Charts &amp; Maps">Reports</span>
+    </a>
+    <ul class="dropdown-menu">
+
+        <!-- Existing submenu items -->
+   <!--      <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Apex">Delivery Pending report</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">SO Report product</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">SO Report-PO</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">board issue-workorder</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chartjs">board Request</span>
+            </a>
+        </li>
+        <!-- Add more existing submenu items as needed -->
+
+        <!-- Additional submenu items -->
+        <!-- <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Email">Sales Report</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Chat">Purchase Report</span>
+            </a>
+        </li>
+        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown">
+                <i class="bx bx-right-arrow-alt"></i><span data-i18n="Todo">Inventory Report</span>
+            </a>
+        </li>
+        <!-- Add more additional submenu items as needed -->
+   <!--  </ul>
+</li>
+
+    </ul>
+</div>
+
+	<!-- /horizontal menu content-->
+</div><div class="content-wrapper">
+	<nav class="top-toolbar navbar navbar-mobile navbar-tablet">
+		<ul class="navbar-nav nav-left">
+			<li class="nav-item">
+				<a href="javascript:void(0)" data-toggle-state="aside-left-open">
+					<i class="icon dripicons-align-left"></i>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="navbar-nav nav-right">
+			<li class="nav-item">
+				<a href="javascript:void(0)" data-toggle-state="mobile-topbar-toggle">
+					<i class="icon dripicons-dots-3 rotate-90"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- <nav class="top-toolbar navbar navbar-desktop flex-nowrap">
+
+		<ul class="navbar-nav nav-right">
+			<li class="nav-item">
+				<a href="javascript:void(0)" class="open-search-button" data-q-action="open-site-search">
+					<a href="javascript:void(0)" class="open-search-button" data-q-action="open-site-search">
+						<i class="no-display" style="color: white;">
+							<h1 style="color: white;"><time>00:00:00</time></h1>
+						</i>
+					</a>
+				</a>
+			</li>
+
+			<li class="nav-item dropdown">
+				<a class="nav-link nav-pill user-avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">						<img src="http://erpprojects.great-site.net/erp_new/assets/img/avatars/1.jpg" class="w-35 rounded-circle" alt="Albert Einstein">				</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-accout">
+					<div class="dropdown-header pb-3">
+						<div class="media d-user">
+															<img src="http://erpprojects.great-site.net/erp_new/assets/img/avatars/1.jpg" class="w-35 rounded-circle" alt="Albert Einstein">							<div class="media-body" style="margin-top: 9px; margin-left: 11px;">
+								<h5 class="mt-0 mb-0"> </h5>
+							</div>
+						</div>
+					</div>
+					<a class="dropdown-item" href="pages.profile.html"><i class="icon dripicons-user"></i> Profile</a>
+					<a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal"><i class="icon dripicons-gear"></i> Change Password</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="http://erpprojects.great-site.net/erp_new/login/logout"><i class="icon dripicons-lock-open"></i> Sign Out</a>
+
+				</div>
+			</li>
+		</ul>
+		<form role="search" action="http://www.authenticgoods.co/themes/quantum-pro/demos/demo1/pages.search.html" class="navbar-form">
+			<div class="form-group">
+				<input type="text" placeholder="Search and press enter..." class="form-control navbar-search" autocomplete="off">
+				<i data-q-action="close-site-search" class="icon dripicons-cross close-search"></i>
+			</div>
+			<button type="submit" class="d-none">Submit</button>
+		</form>
+	</nav> -->
+	
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ModalTitle1">Change Password</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" class="zmdi zmdi-close"></span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form data-toggle="validator" role="form" method="POST">
+						<div class="form-group" id="oldpasserr">
+							<label>Old Password</label>
+							<input type="text" class="form-control" name="password" id="password" required>
+						</div>
+						<span id="form_err" style="color:red;"></span>
+						<div class="form-group ">
+							<label>New Password</label>
+							<input type="password" data-minlength="5" class="form-control" id="inputPassword" placeholder="Password" required>
+							<input type="hidden" id="baseurl" name="baseurl" value="http://erpprojects.great-site.net/erp_new/">
+							<div class="help-block with-errors"></div>
+							<span id="form_err1" style="color:red;"></span>
+						</div>
+						<div class="form-group ">
+							<label>Confirm Password</label>
+							<input type="password" class="form-control" name="c_password" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+							<div class="help-block with-errors"></div>
+							<span id="form_err2" style="color:red;"></span>
+						</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-outline" data-dismiss="modal">Close</button>
+					<div>
+						<button type="button" class="btn btn primary " id="change_pwd" onclick="change_password()">Submit</button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function change_password() {
+
+			var baseurl = $('#baseurl').val();
+			var password = $('#password').val();
+			var n_password = $('#inputPassword').val();
+			var c_password = $('#inputPasswordConfirm').val();
+
+			var array = [];
+			var a = 0;
+			if (password == '') {
+				$('#form_err').addClass('has-error');
+				array[a] = 1;
+			} else {
+				$('#form_err').removeClass('has-error');
+				array[a] = 0;
+			}
+			a++;
+			if (n_password == '') {
+				$('#form_err1').addClass('has-error');
+				array[a] = 1;
+			} else {
+				$('#form_err1').removeClass('has-error');
+				array[a] = 0;
+			}
+			a++;
+			if (c_password == '') {
+				$('#form_err2').addClass('has-error');
+				array[a] = 1;
+			} else if (c_password != n_password) {
+				$('#form_err2').addClass('has-error');
+				array[a] = 1;
+			} else {
+				$('#form_err2').removeClass('has-error');
+				array[a] = 0;
+			}
+			a++;
+			var check = $.inArray(1, array) < 0;
+			if (check == true) {
+
+
+				var data_string = "password=" + password + "&n_password=" + n_password + "&c_password=" + c_password;
+				$.ajax({
+					url: baseurl + "Login/change_password",
+					async: false,
+					type: "POST",
+					data: data_string,
+					dataType: "json",
+					cache: false,
+
+					success: function(data) {
+
+						if (data == 1) {
+							$("#oldpasserr").addClass("has-error");
+							$("#form_err").empty().prepend("invalid Old Password!");
+						} else {
+							$("#oldpasserr").removeClass("has-error");
+							$("#form_err").empty().prepend("");
+							window.location.href = data;
+						}
+					}
+				});
+			}
+		}
+	</script><style>
+    #product {
+        width: 14rem;/* 14 */
+    }
+
+    .product {
+        box-shadow: 1px 6px 10px #5c5858;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .custom-select-width {
+        width: 100%; 
+    }
+</style>
+<div>
+<section id="basic-horizontal-layouts">
+	<div class="row match-height">
+		<div class="col">
+		    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>Success!</strong> Group products added successfully!    </div>
+		</div>
+	</div>
+
+	<div class="row match-height py-6">
+    <!-- Left Column -->
+    <div class="col-md-6" style="min-height: 200px;">
+        <div class="card">           
+            <div class="col-md-4 col-lg-4">
+                <div class="form-group">
+                
+								<select name="group_product_ids" id="group_product_ids" class="form-control select">
+									<option value="">Select Group Products</option>
+																			<option value="3">
+											Allen Solly										</option>
+																			<option value="5">
+											Group A										</option>
+																			<option value="1">
+											group1										</option>
+																			<option value="4">
+											Peter England										</option>
+																			<option value="2">
+											Second										</option>
+																	</select>
+                                <hr>
+                                <br>
+            
+								<select name="brand_id" id="brand_id" class="form-control select">
+									<option value="">Select Brand</option>
+																			<option value="1">
+											PRANA										</option>
+																	</select>
+                                <br>
+                 
+                    <select name="category_id" id="category_id" class="form-control select custom-select-width">
+                        <option value="">Select Category</option>
+                    </select>
+                    <br>
+               
+                    <select name="subcategory_id" id="subcategory_id" class="form-control select custom-select-width">
+                        <option value="">Select Sub Category</option>
+                    </select>
+                    <br>
+                  
+                    <select name="attribute_id" id="attribute_id" class="form-control select custom-select-width">
+                        <option value="">Select Attribute Name</option>
+                    </select>
+                    <br>
+                    
+					<select name="attribute" id="attribute" class="form-control select">
+						<option value="">Select Attribute</option>
+					</select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-md-6" style="min-height: 200px;">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Product List</h4>
+					<div class="float-right">
+						<button type="button" id="buttonmodel" class="btn btn-primary" data-toggle="modal" data-target="#cartModal">
+							View Cart <span id="cart_count"></span>
+						</button>
+					</div>
+				</div>
+
+            <div class="card-body">
+                <div class="row card-columns" id="shoplist">
+                    <!-- Product Listing -->
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center" id="pagin">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+<!-- Modal -->
+
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">View Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" id="cartItems">
+                    <!-- Cart items with images will be dynamically populated here as list items -->
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="http://erpprojects.great-site.net/erp_new/checkout" class="btn btn-primary">Checkout</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal -->
+
+<footer class="footer footer-static footer-light">
+    <br>
+    <br>
+    <p class="clearfix mb-0">
+        <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+    </p>
+</footer>
+
+<!-- END: Footer-->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/core/custom.js"></script>
+<!-- BEGIN: Vendor JS-->
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/vendors.min.js"></script>
+
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+<!-- BEGIN Vendor JS-->
+<!-- BEGIN: Page Vendor JS-->
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/ui/jquery.sticky.js"></script>
+<!-- <script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/charts/apexcharts.min.js"></script> -->
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/extensions/dragula.min.js"></script>
+<!-- END: Page Vendor JS-->
+<!-- BEGIN: Theme JS-->
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/scripts/configs/horizontal-menu.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/core/app-menu.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/core/app.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/scripts/components.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/scripts/footer.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/scripts/customizer.min.js"></script>
+<!-- END: Theme JS-->
+<!-- BEGIN: Page JS-->
+<!-- <script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/scripts/pages/dashboard-analytics.min.js"></script> -->
+<!-- END: Page JS -->
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/ui/jquery.sticky.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/tables/datatable/buttons.bootstrap4.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/scripts/datatables/datatable.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/js/select2.min.js"></script> 
+
+<script src="http://erpprojects.great-site.net/erp_new/assets/app-assets/js/core/sweetalert.js"></script>
+
+<script>
+	  $(document).ready(function() {
+        $('select').select2();
+    });
+</script>
+		<script type="text/javascript">
+			function showCartItems() {
+				const cartItemsContainer = $('#cartItems');
+				cartItemsContainer.empty(); // Clear any existing items
+				$.ajax({
+					url: "http://erpprojects.great-site.net/erp_new/sales/orders/get_cartData",
+					method: "GET",
+					type: "ajax",
+					success: function(result) {
+						let data = JSON.parse(result);
+						data.forEach(item => {
+							var price_data = '';
+							if (item.slash_price) {
+								price_data = '<del>' + item.price + '</del>  <ins>' + item.slash_price + '</ins>';
+							} else {
+								price_data = '<ins>' + item.price + '</ins>';
+							}
+							const listItem = `
+											<li class="list-group-item " >
+												<img src="${item.image}" alt="${item.variation_name}" style="width: 90px; height: 50px; margin-right: 10px; float: left;">
+												<strong>${item.variation_name}</strong><br>
+												Quantity: ${item.qty}<br>
+												Price: ${price_data}
+												<br>
+												<div class="float-right">
+													<a onclick="removeCart(${item.cart_id})" class="btn btn-danger"><i class="ficon bx bx-trash"></i></a>
+												</div>
+											</li>
+										`;
+							cartItemsContainer.append(listItem);
+						});
+					},
+					error: function(error) {
+						console.log(error);
+					}
+				});
+			}
+
+			// Call the function when the modal is about to be shown
+			$('#cartModal').on('show.bs.modal', showCartItems);
+
+			function removeCart(cart_id) {
+				$.ajax({
+					url: "http://erpprojects.great-site.net/erp_new/sales/orders/removeCart",
+					method: "POST",
+					type: "ajax",
+					data: {
+						cart_id: cart_id
+					},
+					success: function(result) {
+						if (result > 0) {
+							Swal.fire(
+								'',
+								'Product Removed in Cart successfully ',
+								'success'
+							)
+						} else {
+							Swal.fire({
+								icon: 'error',
+								title: 'Oops...',
+								text: 'Something went wrong!',
+							})
+						}
+						showCartItems();
+
+					},
+					error: function(error) {
+						console.log(error);
+					}
+				});
+			}
+			$(function() {
+				loadProducts(); //Default load products without filters
+			});
+				
+			$('#brand_id').on('change', function() {
+				var brand_id = $(this).val();
+				if (brand_id) {
+					$.ajax({
+						url: "http://erpprojects.great-site.net/erp_new/sales/orders/get_category",
+						type: "post",
+						dataType: "json",
+						data: {
+							brand_id: brand_id
+						},
+						success: function(data) {
+							let options = "<option value=''>Select Category</option>";
+
+							$.each(data, function(key, value) {
+								options += '<option value="' + value.id + '">' + value.category_name + '</option>';
+								$('#category_id').empty().append(options);
+							});
+						}
+					});
+				} else {
+					$('#category_id').empty();
+				}
+			});
+			$('#category_id').on('change', function() {
+
+				var category_id = $(this).val();
+				if (category_id) {
+					$.ajax({
+						url: "http://erpprojects.great-site.net/erp_new/sales/orders/get_subcategory",
+						type: "post",
+						dataType: "json",
+						data: {
+							category_id: category_id
+						},
+						success: function(data) {
+
+							let options = "<option value=''>Select Sub Category</option>";
+							$.each(data, function(key, value) {
+								options += '<option value="' + value.id + '">' + value.sub_category_name + '</option>';
+								$('#subcategory_id').empty().append(options);
+							});
+						}
+					});
+				} else {
+					$('#subcategory_id').empty();
+				}
+			});
+			$('#subcategory_id').on('change', function() {
+				var sub_category_id = $(this).val();
+				if (sub_category_id) {
+					$.ajax({
+						url: "http://erpprojects.great-site.net/erp_new/sales/orders/get_attributes",
+						type: "post",
+						dataType: "json",
+						data: {
+							sub_category_id: sub_category_id
+						},
+						success: function(data) {
+							let options = "<option value=''>Select Attribute Name</option>";
+							$.each(data, function(key, value) {
+								options += '<option value="' + value.id + '">' + value.attributes_name + '</option>';
+								$('#attribute_id').empty().append(options);
+							});
+						},
+						err: function(err) {
+							console.log(err);
+						}
+					});
+				} else {
+					$('#attribute_id').empty();
+				}
+			});
+			$('#attribute_id').on('change', function() {
+				var attribute_id = parseInt($(this).val());
+				if (attribute_id) {
+					$.ajax({
+						url: "http://erpprojects.great-site.net/erp_new/sales/orders/get_product_attributes_value",
+						type: "post",
+						dataType: "json",
+						data: {
+							attribute_id: attribute_id
+						},
+						success: function(data) {
+							let options = "<option value=''>Select Attribute Name</option>";
+							$.each(data, function(key, value) {
+								options += '<option value="' + value.pro_details_id + '">' + value.attribute_value + '</option>';
+								$('#attribute').empty().append(options);
+							});
+						},
+						err: function(err) {
+							console.log(err);
+						}
+					});
+				} else {
+					$('#attribute_id').empty();
+				}
+			});
+
+			$('.select').on('change', function(e) {
+			    loadProducts();
+			});
+			
+function loadProducts() {
+    var brand_id = $('#brand_id').val();
+    var category_id = $('#category_id').val();
+    var subcategory_id = $('#subcategory_id').val();
+    var group_product_ids = $('#group_product_ids').val();
+    var attribute_id = $('#attribute_id').val();
+    var attribute = $('#attribute').val();
+
+    // Get the product image overlay element
+    var productImageOverlay = $('#product_image_overlay');
+
+    // Add an event listener for dropdown changes
+    $('#brand_id, #category_id, #subcategory_id, #attribute_id, #attribute').on('change', function () {
+        updateImageOverlay();
+    });
+
+    // Update the image overlay with the selected values
+    function updateImageOverlay(selectedValues) {
+        // Update the overlay text immediately
+        productImageOverlay.text(`Brand: ${selectedValues.brand} | Category: ${selectedValues.category} | Subcategory: ${selectedValues.subcategory} | Attribute: ${selectedValues.attribute}`);
+    }
+
+    // Initial update of image overlay
+    var selectedValues = {
+        brand: $('#brand_id option:selected').text(),
+        category: $('#category_id option:selected').text(),
+        subcategory: $('#subcategory_id option:selected').text(),
+        attribute: $('#attribute_id option:selected').text() + ' - ' + $('#attribute option:selected').text(),
+    };
+    updateImageOverlay(selectedValues);
+
+    // Get Products For Shopping page
+    $.ajax({
+        url: "http://erpprojects.great-site.net/erp_new/sales/Orders/get_products",
+        method: "POST",
+        type: "ajax",
+        data: {
+            brand_id: brand_id,
+            category_id: category_id,
+            subcategory_id: subcategory_id,
+            group_product_ids: group_product_ids,
+            attribute: attribute,
+        },
+        success: function (result) {
+            $("#shoplist").empty();
+            let products = JSON.parse(result);
+            if (products != '') {
+                $.each(products, function (i, item) {
+                    var price_data = attrData = '';
+                    if (item.slash_price > 0) {
+                        price_data = '' + item.price + '';
+                    } else {
+                        price_data = '<ins>' + item.price + '</ins>';
+                    }
+
+                    var attributeNameArray = item.attributes_name.split("|");
+                    var attributeValueArray = item.attribute_value.split("|");
+
+                    $.each(attributeNameArray, function (i1, item1) {
+                        attrData += '<b>' + item1 + '</b>  ' + attributeValueArray[i1] + '<br>';
+                    });
+
+                    var downloadLink = `<a id="download_button_${i}" class="btn btn-success" href="#" download="product_image_${i}.png">Download Image</a>`;
+
+                    let body_content = `<div class="card text-black product imgc" id="product">
+                        <img src="${item.image ? item.image : 'http://erpprojects.great-site.net/erp_new/assets/images/no-image.png'}" class="card-img" width="250px" height="300px">
+                        <div class="card-img-overlay" style="margin-top: 15px;">
+                            <p class="card-text text-dark text-center" style="font-size: 20px; font-weight: bold;">${item.product_name} / ${item.product_code} / ${item.variation_name}</p>
+                            <p class="card-text text-dark text-center" style="font-size: 16px; font-weight: bold;">${attrData}</p>
+                            <p class="card-text text-dark text-center" style="font-size: 16px; color: red; font-weight: bold;">Brand: | Category: | Subcategory: | Attribute:</p>
+                        </div>
+
+                        <div class="col text-center">
+                            <p class "card-text text-dark text-center">${price_data}</p>
+                            <a onclick="addtocart(${item.pro_details_id})" class="btn btn-primary">Add to Cart</a>
+                            ${downloadLink}
+                        </div>
+                    </div>`;
+
+                    $("#shoplist").append(body_content);
+
+                    // Add an event listener for the download button
+                    $(`#download_button_${i}`).on('click', function () {
+                        // Update the overlay text in the downloaded image
+                        var selectedValues = {
+                            brand: $('#brand_id option:selected').text(),
+                            category: $('#category_id option:selected').text(),
+                            subcategory: $('#subcategory_id option:selected').text(),
+                            attribute: $('#attribute_id option:selected').text() + ' - ' + $('#attribute option:selected').text(),
+                        };
+
+                        // Create a temporary canvas to draw the overlay text
+                        var canvas = document.createElement('canvas');
+                        var context = canvas.getContext('2d');
+
+                        canvas.width = 250; // Set the width of your image
+                        canvas.height = 300; // Set the height of your image
+
+                        // Draw the image on the canvas
+                        var img = new Image();
+                        img.onload = function () {
+                            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                            // Draw the overlay text on the canvas
+                            context.font = 'bold 14px Arial';
+                            context.fillStyle = 'red';
+                            var margin = 30;
+                            var startX = margin;
+                            var startY = margin + 40;
+
+                            context.fillText(`Brand: ${selectedValues.brand}`, startX, startY + 20);
+                            context.fillText(`Category: ${selectedValues.category}`, startX, startY + 40);
+                            context.fillText(`Subcategory: ${selectedValues.subcategory}`, startX, startY + 60);
+                            context.fillText(`Attribute: ${selectedValues.attribute}`, startX, startY + 80);
+
+                            // Trigger the download
+                            var link = document.createElement('a');
+                            link.href = canvas.toDataURL();
+                            link.download = `product_image_${i}.png`;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        };
+
+                        img.src = item.image; // Assuming item.image contains the correct image source
+                    });
+                });
+
+                //pagination concepts
+                var pageSize = 5;
+                var count = (products.length) / pageSize;
+                n = Math.floor(count);
+                var decimal = count - Math.floor(count);
+                if (decimal) {
+                    var add = '1';
+                }
+                var whole_number = Number(n) + Number(add);
+                if (count > 0) {
+                    $("#pagin").empty();
+
+                    for (var i = 0; i < count; i++) {
+                        $("#pagin").append('<li class="page-item"><a class="page-link">' + (i + 1) + '</a></li>');
+                    }
+
+                    $("#pagin li").first().find("a").addClass("current");
+                    showPage = function (page) {
+                        $(".product").hide();
+                        $(".product").each(function (n) {
+                            if (n >= pageSize * (page - 1) && n < pageSize * page)
+                                $(this).show();
+                        });
+                    }
+
+                    showPage(1);
+
+                    $("#pagin li a").click(function () {
+                        $("#pagin li a").removeClass("current");
+                        $(this).addClass("current");
+                        showPage(parseInt($(this).text()))
+                    });
+                }
+                //pagination concepts
+            } else {
+                var body_content = $('<div class="col-md-12 col-sm-12"><img id="offer_image" class="" src="http://erpprojects.great-site.net/erp_new/assets/images/no_item_found.png"  alt="img" /></div>');
+                $("#shoplist").empty().append(body_content);
+            }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+    //Get Products For Shopping page
+}
+
+
+
+			function addtocart(variation_id) {
+
+				$.ajax({
+					url: "http://erpprojects.great-site.net/erp_new/sales/Orders/addtocart",
+					method: "POST",
+					type: "ajax",
+					data: {
+						//customer_id: customer_id,
+						variation_id: variation_id
+					},
+					success: function(result) {
+						if (result > 0) {
+							Swal.fire(
+								'',
+								'Product Added in Cart successfully ',
+								'success'
+							)
+						}
+					},
+					error: function(error) {
+						console.log(error);
+					}
+				});
+			}
+			$('#btnPrint').click(function() {
+				window.print();
+			});
+		</script>
+
+		<script type="text/javascript">
+			$('#delivery_charge').keyup(function() {
+				if (!isNaN(this.value) && this.value.length != 0) {
+					$('[name="grand_total"]').val(parseInt($("#total").val()) + (parseInt($("#delivery_charge").val())));
+				} else {
+
+					$("#delivery_charge").this.value = '0';
+				}
+			});
+		</script>	
+	    
+</body>
+<style type="text/css">
+    .required:after {
+        content: " *" !important;
+        color: red !important;
+    }
+
+      @media (min-width: 768px) {
+    .imgc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .imgc {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+</style>
+<!-- END: Body-->
+</html>
+</body>
+
+</html>
